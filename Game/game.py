@@ -4,7 +4,7 @@ from PIL import Image, ImageTk, UnidentifiedImageError
 import imageio
 import random
 
-
+# Main Settings
 class Settings:
     def __init__(self):
         self.root = tk.Tk()
@@ -55,7 +55,7 @@ class Settings:
         self.button2.grid(row=0, column=1)
 
         self.root.mainloop()
-
+    # If user clicks yes
     def yes_pressed(self):
         player = self.textbox.get().strip()
         if player:
@@ -64,11 +64,11 @@ class Settings:
             game_instance.yes_start()
         else:
             messagebox.showinfo("Error", "Please enter your name.")
-
+    # If user clicka no
     def no_pressed(self):
         self.root.destroy()
 
-
+# When user clicks yes, this is the main game
 class Game:
     def __init__(self, root):
         self.root = root
@@ -78,7 +78,7 @@ class Game:
         self.current_frame = 0
         self.load_images()
         self.yes_start()
-
+    # Inputting the gif
     def load_images(self):
         image_path = "santa-pulled-by-reindeer.gif"
         try:
@@ -93,7 +93,7 @@ class Game:
 
         self.image_index = 0
         self.image_tk = ImageTk.PhotoImage(self.images[self.image_index])
-
+    # Adding the emojis and using random function to add different emojis
     def create_item(self):
         x = random.randint(50, 550)
         y = 0
@@ -102,7 +102,7 @@ class Game:
             x, y, text=emoji, font=("Arial", 20), fill="white"
         )
         self.items.append((item, emoji))
-
+    # Adding this function in case the user wants to restart
     def update_items(self):
         if not self.game_running:
             return
@@ -145,7 +145,7 @@ class Game:
             self.canvas.delete(item)
         self.items = []
         self.create_item()
-
+    # Tracking the emojis location
     def check_collision(self, item, mouse):
         try:
             x1, y1 = self.canvas.coords(item)
@@ -153,14 +153,14 @@ class Game:
             return x1 - 50 < x2 < x1 + 50 and y1 - 50 < y2 < y1 + 50
         except tk.TclError:
             return False
-
+    # Tracking the user score
     def update_score(self, value):
         self.score += value
         self.score_label.config(text=f"Score: {self.score}")
         self.text_label.config(
             text=f"This game was made by Tamim Dostyar. If the emoji skips from you and hits the bottom of the canvas (screen), then you lose the game."
         )
-
+    # The game's window
     def yes_start(self):
         self.game_running = True
         self.window.title("Start Game")
@@ -224,7 +224,7 @@ class Game:
         self.root.deiconify()
         self.window.destroy()
         self.try_again_clicked = False
-
+    # Below allows the user to restart the game by pressing try again
     def try_again(self):
         if self.try_again_clicked:
             return

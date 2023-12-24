@@ -12,7 +12,7 @@ class Settings:
         # Initialize the main Tkinter window
         self.root = tk.Tk()
         self.root.title("Main Page")
-        self.root.geometry("1200x600")
+        self.root.geometry("600x500")
         self.root.configure(bg="gray")
 
         # Creating labels and entry widgets
@@ -203,7 +203,7 @@ class Game:
         self.game_running = True
         # Set up the game window
         self.window.title("Start Game")
-        self.window.geometry("1200x600")
+        self.window.geometry("650x600")
         self.window.protocol("WM_DELETE_WINDOW", self.on_closing)
 
         # Create the canvas for drawing

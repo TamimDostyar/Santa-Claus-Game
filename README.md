@@ -5,7 +5,7 @@ Graphics and Design:
 Immerse yourself in the enchanting visuals of Santa's winter wonderland. Santa Claus is designed with a cheerful and iconic appearance, complete with his red suit, white beard, and a bag full of gifts. The graphical elements evoke a warm and festive atmosphere, capturing the magic of the holiday season. The game's design radiates a sense of joy, making it a delightful experience for players of all ages.
 
 Gameplay Features:
-Navigate Santa Claus through a series of challenges, avoiding obstacles and collecting presents to deliver to eagerly awaiting children. The intuitive controls allow players to guide Santa with ease, creating an accessible and enjoyable gameplay experience. Encounter friendly characters along the way, each adding a touch of whimsy to the journey. Perhaps there are magical power-ups to enhance Santa's abilities or charming surprises hidden within the snowy landscapes.
+Navigate Santa Claus through a series of challenges, avoiding obstacles and collecting emojis. The intuitive controls allow players to guide Santa with ease, creating an accessible and enjoyable gameplay experience. Encounter friendly characters along the way, each adding a touch of whimsy to the journey. Perhaps there are magical power-ups to enhance Santa's abilities or charming surprises hidden within the snowy landscapes.
 
 Technologies Used:
 This heartwarming adventure was brought to life using the power of Python. Leveraging Python's versatility and simplicity, the game incorporates the necessary libraries and modules for graphical interfaces, ensuring a smooth and visually appealing experience for players. The development process seamlessly integrates Python's capabilities, making it an accessible project for aspiring game developers.
